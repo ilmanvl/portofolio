@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ilma Navila - Web Developer</title>
+    <!-- Memanggil Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Memanggil AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Memanggil Font Google (Poppins) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Memanggil FontAwesome untuk Ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #FAFAFA; }
+        .glass-nav { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); }
+        .floating { animation: float 6s ease-in-out infinite; }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        .marquee-wrapper {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+        .marquee-content {
+            display: flex;
+            width: max-content;
+            animation: scrollMarquee 25s linear infinite; 
+        }
+        .marquee-content.reverse {
+            animation: scrollMarqueeReverse 25s linear infinite;
+        }
+        .marquee-wrapper:hover .marquee-content {
+            animation-play-state: paused;
+        }
+        @keyframes scrollMarquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        @keyframes scrollMarqueeReverse {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased relative overflow-x-hidden">
+
+    <!-- NAVBAR -->
+    <div class="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 w-max">
+        <div data-aos="fade-down">
+            <nav class="glass-nav rounded-full px-6 md:px-8 py-3 shadow-sm border border-gray-100 flex gap-5 md:gap-8 items-center text-sm font-medium">
+                <div class="font-bold text-xl tracking-tight mr-2">IN.</div>
+                <a href="#home" class="nav-link text-blue-600 font-bold hover:text-blue-600 transition">Home</a>
+                <a href="#about" class="nav-link text-gray-800 hover:text-blue-600 transition">About</a>
+                <a href="#experience" class="nav-link text-gray-800 hover:text-blue-600 transition">Experience</a>
+                <a href="#projects" class="nav-link text-gray-800 hover:text-blue-600 transition">Projects</a>
+                <a href="#contact" class="nav-link text-gray-800 hover:text-blue-600 transition">Contact</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-24 max-w-6xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full">
+            <div data-aos="fade-right">
+                <p class="text-gray-500 uppercase tracking-widest text-sm mb-2">Hello, I Am</p>
+                <h1 class="text-5xl lg:text-7xl font-bold leading-tight mb-4 text-gray-900">
+                    Ilma <br> Navila<span class="text-blue-600">.</span>
+                </h1>
+                <h2 class="text-xl lg:text-2xl font-medium text-gray-600 mb-6">Web Developer</h2>
+                
+                <div class="flex gap-4 mb-6 text-2xl text-gray-600">
+                    <a href="https://github.com/ilmanvl/" class="hover:text-blue-600 transition transform hover:scale-110"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/ilmanavila/" class="hover:text-blue-600 transition transform hover:scale-110"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/ilma.nvl/" class="hover:text-blue-600 transition transform hover:scale-110"><i class="fab fa-instagram"></i></a>
+                </div>
+
+                <p class="text-gray-500 mb-8 leading-relaxed max-w-md">
+                    Certified Junior Web Programmer (BNSP) focused on building functional, interactive, and scalable web applications with a touch of intelligent data integration.
+                </p>
+
+                <div class="flex gap-4">
+                    <a href="#projects" class="bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-3 rounded-full font-medium transition shadow-lg shadow-indigo-200 transform hover:-translate-y-1">
+                        <i class="fas fa-briefcase mr-2"></i> View Projects
+                    </a>
+                    <a href="#contact" class="bg-white border border-gray-200 hover:border-gray-400 text-gray-700 px-6 py-3 rounded-full font-medium transition transform hover:-translate-y-1">
+                        <i class="far fa-envelope mr-2"></i> Contact Me
+                    </a>
+                </div>
+            </div>
+
+            <div class="floating relative w-full h-[500px] lg:h-[550px] rounded-[2.5rem] p-6 lg:p-8 shadow-2xl flex flex-col justify-between overflow-hidden" data-aos="fade-left" data-aos-delay="200">
+                <img src="images/IMG_2009.JPG.jpeg" alt="Ilma Navila" class="absolute inset-0 w-full h-full object-cover object-bottom z-0">
+                <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/10 to-black/80 z-10"></div>
+                
+                <div class="relative z-20 mt-2">
+                    <h3 class="text-3xl lg:text-4xl font-bold tracking-tight text-white">
+                        Ilma <span class="text-yellow-500">Navila</span>
+                    </h3>
+                    <p class="text-gray-200 text-sm lg:text-base font-medium mt-1">Web Developer</p>
+                </div>
+
+                <div class="relative z-20 bg-white/20 backdrop-blur-md rounded-2xl p-4 flex justify-between items-center border border-white/30 shadow-lg">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-gray-300 rounded-full overflow-hidden border-2 border-white/50">
+                            <img src="images/IMG_6225.jpg" alt="Avatar" class="w-full h-full object-cover scale-150 -translate-y-2">
+                        </div>
+                        <div>
+                            <p class="text-white font-medium text-sm leading-tight">@ilmanvl</p>
+                            <p class="text-green-400 text-xs flex items-center gap-1 font-medium mt-1">
+                                <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span> Online
+                            </p>
+                        </div>
+                    </div>
+                    <a href="#contact" class="bg-white/30 hover:bg-white/40 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition backdrop-blur-sm border border-white/20 hover:scale-105">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-24 max-w-6xl mx-auto px-6 overflow-hidden">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div class="bg-yellow-400 rounded-3xl h-[450px] relative overflow-hidden shadow-lg" data-aos="fade-right">
+                <img src="images/IMG_0821.jpg" alt="About Me" class="w-full h-full object-cover object-bottom transition duration-700 hover:scale-105">
+            </div>
+            
+            <div data-aos="fade-left">
+                <h2 class="text-3xl font-bold mb-4 text-gray-900 leading-snug">
+                    I AM <span class="bg-blue-500 text-white px-2 py-1 rounded">ILMA NAVILA</span>, <br>
+                    <span class="bg-green-500 text-white px-2 py-1 rounded">WEB DEVELOPER</span>
+                </h2>
+                
+                <div class="border-l-4 border-purple-500 pl-6 my-8">
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        I am a certified <strong>Junior Web Programmer (BNSP)</strong> passionate about building scalable, secure, and user-centric web applications. My core expertise lies in developing robust backend architectures, relational database management, and crafting intuitive full-stack interfaces using <strong>Next.js, React, Tailwind CSS, and Laravel</strong>.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        What sets me apart is my ability to blend system architecture with data intelligence. My foundation in Data Analysis allows me to design highly efficient database schemas and integrate complex workflows—bridging the gap between intelligent data models and functional, enterprise-ready web solutions.
+                    </p>
+                </div>
+
+                <a href="docs/CV_ATS_ILMA NAVILA.pdf" class="inline-block bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-full font-medium transition shadow-lg transform hover:-translate-y-1">
+                    <i class="fas fa-download mr-2"></i> DOWNLOAD CV
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECH SKILLS SECTION -->
+    <section class="py-16 bg-white border-y border-gray-100" data-aos="fade-up">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-12">Tech <span class="text-pink-500">Skills.</span></h2>
+            
+            <div class="flex flex-col gap-6">
+                <!-- Baris 1 -->
+                <div class="marquee-wrapper">
+                    <div class="marquee-content gap-4 px-2">
+                        <div class="flex items-center gap-2 bg-gray-50 border border-gray-100 shadow-sm px-6 py-3 rounded-2xl text-gray-700 font-medium hover:bg-white hover:shadow-md transition"><i class="fab fa-python text-blue-500 text-xl"></i> Python</div>
+                        <div class="flex items-center gap-2 bg-gray-50 border border-gray-100 shadow-sm px-6 py-3 rounded-2xl text-gray-700 font-medium hover:bg-white hover:shadow-md transition"><i class="fab fa-php text-indigo-500 text-xl"></i> PHP</div>
+                        <div class="flex items-center gap-2 bg-gray-50 border border-gray-100 shadow-sm px-6 py-3 rounded-2xl text-gray-700 font-medium hover:bg-white hover:shadow-md transition"><i class="fab fa-laravel text-red-600 text-xl"></i> Laravel</div>
+                        <div class="flex items-center gap-2 bg-gray-50 border border-gray-100 shadow-sm px-6 py-3 rounded-2xl text-gray-700 font-medium hover:bg-white hover:shadow-md transition"><i class="fas fa-fire text-orange-600 text-xl"></i> CodeIgniter</div>
+                        <div class="flex items-center gap-2 bg-gray-50 border border-gray-100 shadow-sm px-6 py-3 rounded-2xl text-gray-700 font-medium hover:bg-white hover:shadow-md transition"><i class="fas fa-brain text-orange-500 text-xl"></i> TensorFlow</div>
+                        <div class="flex items-center gap-2 bg-gray-50 border border-gray-100 shadow-sm px-6 py-3 rounded-2xl text-gray-700 font-medium hover:bg-white hover:shadow-md transition"><i class="fas fa-table text-blue-800 text-xl"></i> Pandas</div>
+                        <div class="flex items-center gap-2 bg-gray-50 border border-gray-100 shadow-sm px-6 py-3 rounded-2xl text-gray-700 font-medium hover:bg-white hover:shadow-md transition"><i class="fas fa-flask text-gray-800 text-xl"></i> Flask</div>
+                        <div class="flex items-center gap-2 bg-gray-50 border border-gray-100 shadow-sm px-6 py-3 rounded-2xl text-gray-700 font-medium hover:bg-white hover:shadow-md transition"><i class="fas fa-database text-blue-500 text-xl"></i> MySQL</div>
+                        
+                        <!-- Duplikat untuk animasi -->
+                        <div class="flex items-center gap-2 bg-gray-50 border border-gray-100 shadow-sm px-6 py-3 rounded-2xl text-gray-700 font-medium hover:bg-white hover:shadow-md transition"><i class="fab fa-python text-blue-500 text-xl"></i> Python</div>
+                        <div class="flex items-center gap-2 bg-gray-50 border border-gray-100 shadow-sm px-6 py-3 rounded-2xl text-gray-700 font-medium hover:bg-white hover:shadow-md transition"><i class="fab fa-php text-indigo-500 text-xl"></i> PHP</div>
+                        <div class="flex items-center gap-2 bg-gray-50 border border-gray-100 shadow-sm px-6 py-3 rounded-2xl text-gray-700 font-medium hover:bg-white hover:shadow-md transition"><i class="fab fa-laravel text-red-600 text-xl"></i> Laravel</div>
+                        <div class="flex items-center gap-2 bg-gray-50 border border-gray-100 shadow-sm px-6 py-3 rounded-2xl text-gray-700 font-medium hover:bg-white hover:shadow-md transition"><i class="fas fa-fire text-orange-600 text-xl"></i> CodeIgniter</div>
+                        <div class="flex items-center gap-2 bg-gray-50 border border-gray-100 shadow-sm px-6 py-3 rounded-2xl text-gray-700 font-medium hover:bg-white hover:shadow-md transition"><i class="fas fa-brain text-orange-500 text-xl"></i> TensorFlow</div>
+                        <div class="flex items-center gap-2 bg-gray-50 border border-gray-100 shadow-sm px-6 py-3 rounded-2xl text-gray-700 font-medium hover:bg-white hover:shadow-md transition"><i class="fas fa-table text-blue-800 text-xl"></i> Pandas</div>
+                        <div class="flex items-center gap-2 bg-gray-50 border border-gray-100 shadow-sm px-6 py-3 rounded-2xl text-gray-700 font-medium hover:bg-white hover:shadow-md transition"><i class="fas fa-flask text-gray-800 text-xl"></i> Flask</div>
+                        <div class="flex items-center gap-2 bg-gray-50 border border-gray-100 shadow-sm px-6 py-3 rounded-2xl text-gray-700 font-medium hover:bg-white hover:shadow-md transition"><i class="fas fa-database text-blue-500 text-xl"></i> MySQL</div>
+                    </div>
+                </div>
+
+                <!-- Baris 2 -->
+                <div class="marquee-wrapper">
+                    <div class="marquee-content reverse gap-4 px-2">
+                        <div class="flex items-center gap-2 bg-gray-50 border border-gray-100 shadow-sm px-6 py-3 rounded-2xl text-gray-700 font-medium hover:bg-white hover:shadow-md transition"><i class="fab fa-react text-blue-400 text-xl"></i> React / Next.js</div>
+                        <div class="flex items-center gap-2 bg-gray-50 border border-gray-100 shadow-sm px-6 py-3 rounded-2xl text-gray-700 font-medium hover:bg-white hover:shadow-md transition"><i class="fab fa-node-js text-green-500 text-xl"></i> Node.js</div>
+                        <div class="flex items-center gap-2 bg-gray-50 border border-gray-100 shadow-sm px-6 py-3 rounded-2xl text-gray-700 font-medium hover:bg-white hover:shadow-md transition"><i class="fas fa-wind text-teal-400 text-xl"></i> Tailwind CSS</div>
+                        <div class="flex items-center gap-2 bg-gray-50 border border-gray-100 shadow-sm px-6 py-3 rounded-2xl text-gray-700 font-medium hover:bg-white hover:shadow-md transition"><i class="fas fa-database text-green-600 text-xl"></i> Supabase / PostgreSQL</div>
+                        <div class="flex items-center gap-2 bg-gray-50 border border-gray-100 shadow-sm px-6 py-3 rounded-2xl text-gray-700 font-medium hover:bg-white hover:shadow-md transition"><i class="fab fa-docker text-blue-500 text-xl"></i> Docker</div>
+                        <div class="flex items-center gap-2 bg-gray-50 border border-gray-100 shadow-sm px-6 py-3 rounded-2xl text-gray-700 font-medium hover:bg-white hover:shadow-md transition"><i class="fab fa-html5 text-orange-600 text-xl"></i> HTML/CSS</div>
+                        <div class="flex items-center gap-2 bg-gray-50 border border-gray-100 shadow-sm px-6 py-3 rounded-2xl text-gray-700 font-medium hover:bg-white hover:shadow-md transition"><i class="fab fa-js text-yellow-500 text-xl"></i> JavaScript</div>
+                        <div class="flex items-center gap-2 bg-gray-50 border border-gray-100 shadow-sm px-6 py-3 rounded-2xl text-gray-700 font-medium hover:bg-white hover:shadow-md transition"><i class="fab fa-git-alt text-red-600 text-xl"></i> Git</div>
+                        
+                        <!-- Duplikat untuk animasi -->
+                        <div class="flex items-center gap-2 bg-gray-50 border border-gray-100 shadow-sm px-6 py-3 rounded-2xl text-gray-700 font-medium hover:bg-white hover:shadow-md transition"><i class="fab fa-react text-blue-400 text-xl"></i> React / Next.js</div>
+                        <div class="flex items-center gap-2 bg-gray-50 border border-gray-100 shadow-sm px-6 py-3 rounded-2xl text-gray-700 font-medium hover:bg-white hover:shadow-md transition"><i class="fab fa-node-js text-green-500 text-xl"></i> Node.js</div>
+                        <div class="flex items-center gap-2 bg-gray-50 border border-gray-100 shadow-sm px-6 py-3 rounded-2xl text-gray-700 font-medium hover:bg-white hover:shadow-md transition"><i class="fas fa-wind text-teal-400 text-xl"></i> Tailwind CSS</div>
+                        <div class="flex items-center gap-2 bg-gray-50 border border-gray-100 shadow-sm px-6 py-3 rounded-2xl text-gray-700 font-medium hover:bg-white hover:shadow-md transition"><i class="fas fa-database text-green-600 text-xl"></i> Supabase / PostgreSQL</div>
+                        <div class="flex items-center gap-2 bg-gray-50 border border-gray-100 shadow-sm px-6 py-3 rounded-2xl text-gray-700 font-medium hover:bg-white hover:shadow-md transition"><i class="fab fa-docker text-blue-500 text-xl"></i> Docker</div>
+                        <div class="flex items-center gap-2 bg-gray-50 border border-gray-100 shadow-sm px-6 py-3 rounded-2xl text-gray-700 font-medium hover:bg-white hover:shadow-md transition"><i class="fab fa-html5 text-orange-600 text-xl"></i> HTML/CSS</div>
+                        <div class="flex items-center gap-2 bg-gray-50 border border-gray-100 shadow-sm px-6 py-3 rounded-2xl text-gray-700 font-medium hover:bg-white hover:shadow-md transition"><i class="fab fa-js text-yellow-500 text-xl"></i> JavaScript</div>
+                        <div class="flex items-center gap-2 bg-gray-50 border border-gray-100 shadow-sm px-6 py-3 rounded-2xl text-gray-700 font-medium hover:bg-white hover:shadow-md transition"><i class="fab fa-git-alt text-red-600 text-xl"></i> Git</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATES & AWARDS SECTION -->
+    <section id="certificates" class="py-24 bg-gray-50 border-b border-gray-100 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold mb-4">Certificates & <span class="text-teal-500">Awards.</span></h2>
+                <p class="text-gray-500">Professional certifications that validate my technical expertise.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden group hover:shadow-2xl transition duration-300 transform hover:-translate-y-2" data-aos="fade-up">
+                    <div class="h-56 bg-gray-100 relative overflow-hidden flex items-center justify-center p-4">
+                        <img src="images/Sertif-bnsp.png" alt="BNSP Certificate" class="w-full h-full object-contain drop-shadow-md group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-1">Junior Web Programmer</h3>
+                        <p class="text-sm text-blue-600 font-medium mb-3">BNSP (Badan Nasional Sertifikasi Profesi)</p>
+                        <p class="text-gray-500 text-xs font-medium"><i class="far fa-calendar-alt"></i> Issued: Jully 2026</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden group hover:shadow-2xl transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="150">
+                    <div class="h-56 bg-gray-100 relative overflow-hidden flex items-center justify-center p-4 border-b border-gray-100">
+                        <img src="images/artikelSinta2.png" alt="JUTIF Sinta 2 Publication" class="w-full h-full object-contain drop-shadow-md group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-3 right-3 bg-green-500 text-white text-[10px] font-bold px-3 py-1 rounded-full shadow">SINTA 2</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-1 line-clamp-2" title="Banking Stock Price Prediction Dashboard Using Long Short-Term Memory">Banking Stock Price Prediction Dashboard...</h3>
+                        <p class="text-sm text-green-600 font-medium mb-3">Jurnal Teknik Informatika (JUTIF)</p>
+                        <div class="flex items-center justify-between mt-4">
+                            <p class="text-gray-500 text-xs font-medium"><i class="far fa-calendar-alt"></i> Apr 2026</p>
+                            <a href="https://doi.org/10.52436/1.jutif.2026.7.2.580" target="_blank" class="text-xs text-blue-600 font-bold hover:underline flex items-center gap-1">
+                                View Article <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden group hover:shadow-2xl transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-56 bg-gray-100 relative overflow-hidden flex items-center justify-center p-4">
+                        <img src="images/bangkit-sertif.jpg" alt="Bangkit Certificate" class="w-full h-full object-contain drop-shadow-md group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-1">Machine Learning Cohort</h3>
+                        <p class="text-sm text-red-500 font-medium mb-3">Bangkit Academy (Google, GoTo, Traveloka)</p>
+                        <p class="text-gray-500 text-xs font-medium"><i class="far fa-calendar-alt"></i> Issued: Dec 2024</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden group hover:shadow-2xl transition duration-300 transform hover:-translate-y-2" data-aos="fade-up">
+                    <div class="h-56 bg-gray-100 relative overflow-hidden flex items-center justify-center p-4">
+                        <img src="images/sertif-dasarPemrogramanWeb.jpg" alt="Dicoding Certificate" class="w-full h-full object-contain drop-shadow-md group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-1">Machine Learning Terapan</h3>
+                        <p class="text-sm text-indigo-600 font-medium mb-3">Dicoding Indonesia</p>
+                        <p class="text-gray-500 text-xs font-medium"><i class="far fa-calendar-alt"></i> Issued: Jan 2025</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden group hover:shadow-2xl transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="150">
+                    <div class="h-56 bg-gray-100 relative overflow-hidden flex items-center justify-center p-4">
+                        <img src="images/sertif-dlCoursera.jpg" alt="DeepLearning.AI TensorFlow Developer" class="w-full h-full object-contain drop-shadow-md group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-1">TensorFlow Developer</h3>
+                        <p class="text-sm text-blue-600 font-medium mb-3">DeepLearning.AI & Coursera</p>
+                        <p class="text-gray-500 text-xs font-medium"><i class="far fa-calendar-alt"></i> Issued: Nov 2024</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden group hover:shadow-2xl transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-56 bg-gray-100 relative overflow-hidden flex items-center justify-center p-4">
+                        <img src="images/sertif-mlCoursera.jpg" alt="Machine Learning Stanford" class="w-full h-full object-contain drop-shadow-md group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-1">Machine Learning Specialization</h3>
+                        <p class="text-sm text-red-600 font-medium mb-3">Stanford Univ & DeepLearning.AI</p>
+                        <p class="text-gray-500 text-xs font-medium"><i class="far fa-calendar-alt"></i> Issued: Oct 2024</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="py-24 max-w-5xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-12" data-aos="fade-down">Work <span class="text-purple-600">Experience.</span></h2>
+        
+        <div class="space-y-8">
+            <div class="bg-white border border-gray-100 rounded-3xl p-8 shadow-xl text-left hover:shadow-2xl transition duration-300 transform hover:-translate-y-1" data-aos="fade-up">
+                <div class="flex justify-between items-start flex-wrap gap-4 mb-6 border-b border-gray-100 pb-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center text-blue-500 text-2xl">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900">Economic Census Enumerator</h3>
+                            <p class="text-purple-600 font-medium">Badan Pusat Statistik (BPS)</p>
+                        </div>
+                    </div>
+                    <div class="text-right text-gray-500 text-sm">
+                        <p><i class="far fa-calendar-alt"></i> June 2026 - August 2026</p> 
+                        <p><i class="fas fa-map-marker-alt"></i> Kabupaten Pekalongan</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-600">
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Conducting comprehensive field data collection and business profiling for the National Economic Census.</li>
+                        <li>Ensuring strict data accuracy and integrity when verifying and inputting economic data into the national database system.</li>
+                    </ul>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Honing communication skills and user-centric thinking by directly interacting with various business owners to gather critical information.</li>
+                        <li>Strengthening analytical and real-world data handling skills, reinforcing my capability as a developer to manage complex databases.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-white border border-gray-100 rounded-3xl p-8 shadow-xl text-left hover:shadow-2xl transition duration-300 transform hover:-translate-y-1" data-aos="fade-up" data-aos-delay="150">
+                <div class="flex justify-between items-start flex-wrap gap-4 mb-6 border-b border-gray-100 pb-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-14 h-14 bg-yellow-50 rounded-xl flex items-center justify-center text-yellow-500 text-2xl">
+                            <i class="fas fa-folder-open"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900">Finance & General Affairs Intern</h3>
+                            <p class="text-purple-600 font-medium">PT PLN (Persero) UP3 Pekalongan</p>
+                        </div>
+                    </div>
+                    <div class="text-right text-gray-500 text-sm">
+                        <p><i class="far fa-calendar-alt"></i> Jan 2025 - Apr 2025</p> 
+                        <p><i class="fas fa-map-marker-alt"></i> Kota Pekalongan</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-600 mb-8">
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Supported the Finance and General Affairs division in managing corporate administrative tasks, data processing, and document archiving.</li>
+                        <li>Gained a deep understanding of corporate business processes, enhancing my ability to design software/web solutions that align with actual business needs.</li>
+                    </ul>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Maintained high accuracy in handling administrative data and assisted in preparing departmental reports.</li>
+                        <li>Developed essential professional skills including cross-departmental communication, time management, and adaptability in a strict corporate environment.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <p class="text-xs text-gray-400 font-bold tracking-widest uppercase mb-3"><i class="fas fa-code"></i> Technologies Used</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm hover:bg-green-50 hover:text-green-600 transition cursor-default">Microsoft Excel</span>
+                        <span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm hover:bg-green-50 hover:text-green-600 transition cursor-default">Spreadsheet</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white border border-gray-100 rounded-3xl p-8 shadow-xl text-left hover:shadow-2xl transition duration-300 transform hover:-translate-y-1" data-aos="fade-up" data-aos-delay="300">
+                <div class="flex justify-between items-start flex-wrap gap-4 mb-6 border-b border-gray-100 pb-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-14 h-14 bg-red-50 rounded-xl flex items-center justify-center text-red-500 text-2xl">
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900">Machine Learning Cohort</h3>
+                            <p class="text-purple-600 font-medium">Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka</p>
+                        </div>
+                    </div>
+                    <div class="text-right text-gray-500 text-sm">
+                        <p><i class="far fa-calendar-alt"></i> Sep 2024 - Dec 2024</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Indonesia</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-600 mb-8">
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Graduated from Bangkit Academy, an intensive tech and career readiness program officially endorsed by the Ministry of Education (MSIB).</li>
+                        <li>Collaborated in a cross-functional team to build and launch <strong>Anemalyzed</strong> as the final Capstone Project.</li>
+                    </ul>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Bridged the gap between Machine Learning and software development by preparing datasets, training models, and planning backend deployment.</li>
+                        <li>Gained hands-on experience in structuring Python-based environments to serve AI models for application integration.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <p class="text-xs text-gray-400 font-bold tracking-widest uppercase mb-3"><i class="fas fa-code"></i> Technologies Used</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm hover:bg-red-50 hover:text-red-500 transition cursor-default">Python</span>
+                        <span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm hover:bg-orange-50 hover:text-orange-600 transition cursor-default">TensorFlow</span>
+                        <span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm hover:bg-red-50 hover:text-red-500 transition cursor-default">Streamlit</span>
+                        <span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm hover:bg-blue-50 hover:text-blue-600 transition cursor-default">Pandas</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="py-24 bg-gray-50 border-t border-gray-100 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold mb-4">Featured <span class="text-orange-500">Works.</span></h2>
+                <p class="text-gray-500">A collection of projects I've built, focusing on Full-Stack Web Development and AI.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Project 1 -->
+                <div class="bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden group hover:shadow-2xl transition duration-300 transform hover:-translate-y-2" data-aos="fade-up">
+                    <div class="h-64 bg-gradient-to-br from-teal-100 to-green-100 p-8 flex items-center justify-center relative overflow-hidden">
+                        <img src="images/dental.png" alt="Senyumrekah.id" class="w-full h-full object-cover rounded-xl shadow-md group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Senyumrekah.id – Dental Clinic System</h3>
+                        <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                            A full-stack web application designed to digitize dental clinic operations. Features include secure multi-role authentication (Super Admin, Receptionist, Doctor, Patient) and a responsive UI tailored for seamless patient management and scheduling.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-blue-50 text-blue-600 px-3 py-1 rounded text-xs font-semibold"><i class="fab fa-react"></i> Next.js</span>
+                            <span class="bg-teal-50 text-teal-600 px-3 py-1 rounded text-xs font-semibold"><i class="fas fa-wind"></i> Tailwind CSS</span>
+                            <span class="bg-green-50 text-green-600 px-3 py-1 rounded text-xs font-semibold"><i class="fas fa-database"></i> Supabase</span>
+                        </div>
+                        <div class="flex items-center gap-6 mt-2">
+                            <a href="https://senyum-rekah.netlify.app/" target="_blank" class="text-teal-600 font-bold text-sm hover:underline flex items-center group-hover:text-teal-800">
+                                <i class="fas fa-external-link-alt mr-2"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/ilmanvl/NAMA_REPO_SENYUMREKAH" target="_blank" class="text-gray-600 font-bold text-sm hover:underline flex items-center hover:text-gray-900">
+                                <i class="fab fa-github mr-2 text-lg"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden group hover:shadow-2xl transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="150">
+                    <div class="h-64 bg-gradient-to-br from-purple-100 to-pink-100 p-8 flex items-center justify-center relative overflow-hidden">
+                        <img src="images/batik-larasati.png" alt="Expense Management System" class="w-full h-full object-cover rounded-xl shadow-md group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Batik Larasati – Expense Workflow App</h3>
+                        <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                            An operational workflow management system featuring an approval hierarchy for Staff, Accountants, and Directors. Integrated with automated email alerts and bank mutation tracking to streamline corporate expense requests.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-purple-50 text-purple-600 px-3 py-1 rounded text-xs font-semibold"><i class="fab fa-react"></i> Next.js</span>
+                            <span class="bg-blue-50 text-blue-600 px-3 py-1 rounded text-xs font-semibold"><i class="fas fa-server"></i> RESTful API</span>
+                            <span class="bg-red-50 text-red-600 px-3 py-1 rounded text-xs font-semibold"><i class="fab fa-git-alt"></i> Git Workflow</span>
+                        </div>
+                        <div class="flex items-center gap-6 mt-2">
+                            <a href="https://batik-larasati.netlify.app/" target="_blank" class="text-purple-600 font-bold text-sm hover:underline flex items-center group-hover:text-purple-800">
+                                <i class="fas fa-external-link-alt mr-2"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/ilmanvl/NAMA_REPO_BATIKLARASATI" target="_blank" class="text-gray-600 font-bold text-sm hover:underline flex items-center hover:text-gray-900">
+                                <i class="fab fa-github mr-2 text-lg"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden group hover:shadow-2xl transition duration-300 transform hover:-translate-y-2" data-aos="fade-up">
+                    <div class="h-64 bg-gradient-to-br from-red-100 to-orange-100 p-8 flex items-center justify-center relative overflow-hidden">
+                        <img src="images/preview-anemalyze.png" alt="Anemalyzed" class="w-full h-full object-cover rounded-xl shadow-md group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Anemalyze – ML Capstone</h3>
+                        <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                            A collaborative product development project built during Bangkit Academy. I focused on designing and optimizing Machine Learning models (TensorFlow) and architecting how these complex algorithms integrate seamlessly with backend APIs to provide real-time user solutions.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-blue-50 text-blue-600 px-3 py-1 rounded text-xs font-semibold"><i class="fab fa-python"></i> Python</span>
+                            <span class="bg-orange-50 text-orange-600 px-3 py-1 rounded text-xs font-semibold"><i class="fas fa-brain"></i> TensorFlow</span>
+                            <span class="bg-green-50 text-green-600 px-3 py-1 rounded text-xs font-semibold"><i class="fas fa-server"></i> Backend API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden group hover:shadow-2xl transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="150">
+                    <div class="h-64 bg-gradient-to-br from-blue-100 to-indigo-100 p-8 flex items-center justify-center relative overflow-hidden">
+                        <img src="images/previewEchelonStock.png" alt="EchelonStock Dashboard" class="w-full h-full object-cover rounded-xl shadow-md group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">EchelonStock – Predictive Dashboard</h3>
+                        <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                            An interactive web dashboard built to predict banking sector stock prices. It utilizes a Stacked Long Short-Term Memory (LSTM) deep learning architecture to process financial data and provide robust short-term forecasting, bridging advanced AI with real-time decision support.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-blue-50 text-blue-600 px-3 py-1 rounded text-xs font-semibold"><i class="fab fa-python"></i> Flask</span>
+                            <span class="bg-orange-50 text-orange-600 px-3 py-1 rounded text-xs font-semibold"><i class="fas fa-brain"></i> LSTM (TensorFlow)</span>
+                            <span class="bg-indigo-50 text-indigo-600 px-3 py-1 rounded text-xs font-semibold"><i class="fas fa-chart-line"></i> Pandas</span>
+                        </div>
+                        <a href="https://github.com/ilmanvl/echelonstock" target="_blank" class="text-gray-600 font-bold text-sm hover:underline flex items-center hover:text-gray-900">
+                                <i class="fab fa-github mr-2 text-lg"></i> Source Code
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-24 max-w-5xl mx-auto px-6 overflow-hidden">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+            <div data-aos="fade-right">
+                <h2 class="text-4xl font-bold mb-4">Get In <span class="text-indigo-600">Touch.</span></h2>
+                <p class="text-gray-600 mb-10">Have a project idea, a question, or just want to say hi? Feel free to drop a message. I'm always open to new collaborative opportunities.</p>
+                
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4 group cursor-default">
+                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xl group-hover:bg-blue-600 group-hover:text-white transition">
+                            <i class="far fa-envelope"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500 uppercase font-bold tracking-wider">Email</p>
+                            <p class="font-medium text-gray-900 group-hover:text-blue-600 transition">ilmanavila28@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center gap-4 group cursor-default">
+                        <div class="w-12 h-12 bg-pink-100 text-pink-600 rounded-full flex items-center justify-center text-xl group-hover:bg-pink-600 group-hover:text-white transition">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500 uppercase font-bold tracking-wider">Lokasi</p>
+                            <p class="font-medium text-gray-900 group-hover:text-pink-600 transition">Pekalongan, Jawa Tengah</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-3xl shadow-xl p-8 border border-gray-100" data-aos="fade-left">
+                <form id="contactForm" action="https://formspree.io/f/xyeebreb" method="POST" class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                        <input type="text" name="name" placeholder="Enter your name" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 transition">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                        <input type="email" name="email" placeholder="name@email.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Format email tidak valid (harus mengandung @ dan domain seperti .com/.id)" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 transition">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                        <textarea name="message" rows="4" placeholder="Tell me about your project or idea..." required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 transition resize-none"></textarea>
+                    </div>
+                    <button id="submitBtn" type="submit" class="w-full bg-gray-900 hover:bg-gray-800 text-white font-medium py-4 rounded-xl transition flex justify-center items-center gap-2 transform hover:scale-[1.02]">
+                        <i class="far fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white py-8 border-t border-gray-100 text-center text-sm text-gray-500">
+        <p>&copy; 2026 Ilma Navila. Web Developer</p>
+    </footer>
+
+    <!-- Memanggil AOS Animation JS & ScrollSpy -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, 
+            once: true,     
+            offset: 100     
+        });
+
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-blue-600', 'font-bold');
+                link.classList.add('text-gray-800');
+                
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('text-blue-600', 'font-bold');
+                    link.classList.remove('text-gray-800');
+                }
+            });
+        });
+
+        const contactForm = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+
+        if (contactForm && submitBtn) {
+            contactForm.addEventListener('submit', function() {
+                // Mengubah teks dan ikon saat proses kirim
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                // Mematikan tombol agar tidak bisa diklik lagi
+                submitBtn.disabled = true;
+                // Menambahkan efek visual agar tombol terlihat tidak aktif
+                submitBtn.classList.add('opacity-70', 'cursor-not-allowed');
+                submitBtn.classList.remove('hover:scale-[1.02]', 'hover:bg-gray-800');
+            });
+        }
+    </script>
+
+</body>
+</html>
