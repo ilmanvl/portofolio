@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ilma Navila - Web Developer</title>
+    <title>Ilma Navila - Full-Stack Developer</title>
     <!-- Memanggil Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Memanggil AOS Animation CSS -->
@@ -74,7 +74,7 @@
                 <h1 class="text-5xl lg:text-7xl font-bold leading-tight mb-4 text-gray-900">
                     Ilma <br> Navila<span class="text-blue-600">.</span>
                 </h1>
-                <h2 class="text-xl lg:text-2xl font-medium text-gray-600 mb-6">Web Developer</h2>
+                <h2 class="text-xl lg:text-2xl font-medium text-gray-600 mb-6">Full-Stack Developer</h2>
                 
                 <div class="flex gap-4 mb-6 text-2xl text-gray-600">
                     <a href="https://github.com/ilmanvl/" class="hover:text-blue-600 transition transform hover:scale-110"><i class="fab fa-github"></i></a>
@@ -104,7 +104,7 @@
                     <h3 class="text-3xl lg:text-4xl font-bold tracking-tight text-white">
                         Ilma <span class="text-yellow-500">Navila</span>
                     </h3>
-                    <p class="text-gray-200 text-sm lg:text-base font-medium mt-1">Web Developer</p>
+                    <p class="text-gray-200 text-sm lg:text-base font-medium mt-1">Full-Stack Developer</p>
                 </div>
 
                 <div class="relative z-20 bg-white/20 backdrop-blur-md rounded-2xl p-4 flex justify-between items-center border border-white/30 shadow-lg">
@@ -137,7 +137,7 @@
             <div data-aos="fade-left">
                 <h2 class="text-3xl font-bold mb-4 text-gray-900 leading-snug">
                     I AM <span class="bg-blue-500 text-white px-2 py-1 rounded">ILMA NAVILA</span>, <br>
-                    <span class="bg-green-500 text-white px-2 py-1 rounded">WEB DEVELOPER</span>
+                    <span class="bg-green-500 text-white px-2 py-1 rounded">FULL-STACK DEVELOPER</span>
                 </h2>
                 
                 <div class="border-l-4 border-purple-500 pl-6 my-8">
@@ -214,7 +214,7 @@
     </section>
 
     <!-- CERTIFICATES & AWARDS SECTION -->
-    <section id="certificates" class="py-24 bg-gray-50 border-b border-gray-100 overflow-hidden">
+    <section id="certificates" class="py-24 bg-gray-50 border-b border-gray-100 overflow-hidden relative">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-3xl font-bold mb-4">Certificates & <span class="text-teal-500">Awards.</span></h2>
@@ -223,92 +223,150 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <div class="bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden group hover:shadow-2xl transition duration-300 transform hover:-translate-y-2" data-aos="fade-up">
+                <!-- Card 1: BNSP -->
+                <div class="bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden group hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 cursor-pointer" data-aos="fade-up" onclick="openModal('Junior Web Programmer', 'BNSP (Badan Nasional Sertifikasi Profesi)', 'Issued: Jully 2026', 'images/Sertif-bnsp.png', 'Demonstrated comprehensive competence in the fundamental web development lifecycle, including UI design (HTML/CSS), client-side programming (JavaScript), and database management. The final certification project was built using PHP and the CodeIgniter 4 framework. Officially certified by the state as an industry-ready junior web programmer.')">
                     <div class="h-56 bg-gray-100 relative overflow-hidden flex items-center justify-center p-4">
                         <img src="images/Sertif-bnsp.png" alt="BNSP Certificate" class="w-full h-full object-contain drop-shadow-md group-hover:scale-105 transition duration-500">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Junior Web Programmer</h3>
-                        <p class="text-sm text-blue-600 font-medium mb-3">BNSP (Badan Nasional Sertifikasi Profesi)</p>
+                    <div class="p-6 relative">
+                        <h3 class="text-lg font-bold text-gray-900 mb-1 pr-6">Junior Web Programmer</h3>
+                        <i class="fas fa-expand-alt absolute top-7 right-6 text-gray-400 group-hover:text-teal-500 transition"></i>
+                        <p class="text-sm text-blue-600 font-medium mb-3">BNSP</p>
                         <p class="text-gray-500 text-xs font-medium"><i class="far fa-calendar-alt"></i> Issued: Jully 2026</p>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden group hover:shadow-2xl transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="150">
+                <!-- Card 2: SINTA 2 -->
+                <div class="bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden group hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 cursor-pointer relative" data-aos="fade-up" data-aos-delay="150" onclick="openModal('Banking Stock Price Prediction Dashboard...', 'Jurnal Teknik Informatika (JUTIF)', 'Apr 2026', 'images/artikelSinta2.png', 'Published a scientific research paper in a SINTA 2 accredited journal. This project demonstrates my ability to design Machine Learning models (Long Short-Term Memory) to predict banking sector stock price movements, and to document technical findings professionally and academically.')">
                     <div class="h-56 bg-gray-100 relative overflow-hidden flex items-center justify-center p-4 border-b border-gray-100">
                         <img src="images/artikelSinta2.png" alt="JUTIF Sinta 2 Publication" class="w-full h-full object-contain drop-shadow-md group-hover:scale-105 transition duration-500">
-                        <span class="absolute top-3 right-3 bg-green-500 text-white text-[10px] font-bold px-3 py-1 rounded-full shadow">SINTA 2</span>
+                        <span class="absolute top-3 right-3 bg-green-500 text-white text-[10px] font-bold px-3 py-1 rounded-full shadow z-10">SINTA 2</span>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1 line-clamp-2" title="Banking Stock Price Prediction Dashboard Using Long Short-Term Memory">Banking Stock Price Prediction Dashboard...</h3>
-                        <p class="text-sm text-green-600 font-medium mb-3">Jurnal Teknik Informatika (JUTIF)</p>
+                    <div class="p-6 relative">
+                        <h3 class="text-lg font-bold text-gray-900 mb-1 line-clamp-2 pr-6" title="Banking Stock Price Prediction Dashboard Using Long Short-Term Memory">Banking Stock Price Prediction Dashboard...</h3>
+                        <i class="fas fa-expand-alt absolute top-7 right-6 text-gray-400 group-hover:text-teal-500 transition"></i>
+                        <p class="text-sm text-green-600 font-medium mb-3">JUTIF</p>
                         <div class="flex items-center justify-between mt-4">
                             <p class="text-gray-500 text-xs font-medium"><i class="far fa-calendar-alt"></i> Apr 2026</p>
-                            <a href="https://doi.org/10.52436/1.jutif.2026.7.2.580" target="_blank" class="text-xs text-blue-600 font-bold hover:underline flex items-center gap-1">
+                            <a href="https://jutif.if.unsoed.ac.id/index.php/jurnal/article/view/5802" target="_blank" class="text-xs text-blue-600 font-bold hover:underline flex items-center gap-1 relative z-20" onclick="event.stopPropagation();">
                                 View Article <i class="fas fa-external-link-alt"></i>
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden group hover:shadow-2xl transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                <!-- Card 3: BBPVP & Plan Indonesia -->
+                <div class="bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden group hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 cursor-pointer" data-aos="fade-up" onclick="openModal('Web Programming with AI Utilization', 'BBPVP Semarang & Plan Indonesia', 'Issued: Oct 2026', 'images/web-programmer.jpeg', 'Completed 112 learning hours of Web Programming with AI Utilization Training in the Future Innovators Bootcamp. The program focused on leveraging artificial intelligence tools to enhance and accelerate web development processes. Organized by Yayasan Plan International Indonesia and Balai Besar Pelatihan Vokasi dan Produktivitas (BBPVP) Semarang.')">
+                    <div class="h-56 bg-gray-100 relative overflow-hidden flex items-center justify-center p-4">
+                        <img src="images/web-programmer.jpeg" alt="BBPVP Certificate" class="w-full h-full object-contain drop-shadow-md group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6 relative">
+                        <h3 class="text-lg font-bold text-gray-900 mb-1 pr-6">Web Programming with AI</h3>
+                        <i class="fas fa-expand-alt absolute top-7 right-6 text-gray-400 group-hover:text-teal-500 transition"></i>
+                        <p class="text-sm text-blue-600 font-medium mb-3 truncate">BBPVP Semarang & Plan Indonesia</p>
+                        <p class="text-gray-500 text-xs font-medium"><i class="far fa-calendar-alt"></i> Issued: Oct 2026</p>
+                    </div>
+                </div>
+
+                <!-- Card 4: Bangkit -->
+                <div class="bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden group hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 cursor-pointer" data-aos="fade-up" data-aos-delay="300" onclick="openModal('Machine Learning Cohort', 'Bangkit Academy (Google, GoTo, Traveloka)', 'Issued: Dec 2024', 'images/bangkit-sertif.jpg', 'Graduated from the intensive MSIB Kampus Merdeka program led by Google, GoTo, and Traveloka. Focused on artificial intelligence engineering, large-scale data processing, deploying Machine Learning models in cloud environments, as well as developing leadership and Agile project management soft skills.')">
                     <div class="h-56 bg-gray-100 relative overflow-hidden flex items-center justify-center p-4">
                         <img src="images/bangkit-sertif.jpg" alt="Bangkit Certificate" class="w-full h-full object-contain drop-shadow-md group-hover:scale-105 transition duration-500">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Machine Learning Cohort</h3>
-                        <p class="text-sm text-red-500 font-medium mb-3">Bangkit Academy (Google, GoTo, Traveloka)</p>
+                    <div class="p-6 relative">
+                        <h3 class="text-lg font-bold text-gray-900 mb-1 pr-6">Machine Learning Cohort</h3>
+                        <i class="fas fa-expand-alt absolute top-7 right-6 text-gray-400 group-hover:text-teal-500 transition"></i>
+                        <p class="text-sm text-red-500 font-medium mb-3 truncate">Bangkit Academy</p>
                         <p class="text-gray-500 text-xs font-medium"><i class="far fa-calendar-alt"></i> Issued: Dec 2024</p>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden group hover:shadow-2xl transition duration-300 transform hover:-translate-y-2" data-aos="fade-up">
+                <!-- Card 5: Dicoding -->
+                <div class="bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden group hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 cursor-pointer" data-aos="fade-up" onclick="openModal('Machine Learning Terapan', 'Dicoding Indonesia', 'Issued: Jan 2025', 'images/sertif-dasarPemrogramanWeb.jpg', 'Mastered best practices in developing and implementing artificial intelligence models for real-world scenarios. The curriculum covered raw data preprocessing, building neural network architectures, and evaluating as well as optimizing the accuracy of Python-based predictive models.')">
                     <div class="h-56 bg-gray-100 relative overflow-hidden flex items-center justify-center p-4">
                         <img src="images/sertif-dasarPemrogramanWeb.jpg" alt="Dicoding Certificate" class="w-full h-full object-contain drop-shadow-md group-hover:scale-105 transition duration-500">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Machine Learning Terapan</h3>
+                    <div class="p-6 relative">
+                        <h3 class="text-lg font-bold text-gray-900 mb-1 pr-6">Machine Learning Terapan</h3>
+                        <i class="fas fa-expand-alt absolute top-7 right-6 text-gray-400 group-hover:text-teal-500 transition"></i>
                         <p class="text-sm text-indigo-600 font-medium mb-3">Dicoding Indonesia</p>
                         <p class="text-gray-500 text-xs font-medium"><i class="far fa-calendar-alt"></i> Issued: Jan 2025</p>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden group hover:shadow-2xl transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="150">
+                <!-- Card 6: Coursera TF -->
+                <div class="bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden group hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 cursor-pointer" data-aos="fade-up" data-aos-delay="150" onclick="openModal('TensorFlow Developer', 'DeepLearning.AI & Coursera', 'Issued: Nov 2024', 'images/sertif-dlCoursera.jpg', 'An advanced professional certification validated by DeepLearning.AI. Proved technical competence in building efficient Deep Learning algorithms, Neural Networks, image classification, Natural Language Processing (NLP), and Time Series forecasting using the TensorFlow library.')">
                     <div class="h-56 bg-gray-100 relative overflow-hidden flex items-center justify-center p-4">
                         <img src="images/sertif-dlCoursera.jpg" alt="DeepLearning.AI TensorFlow Developer" class="w-full h-full object-contain drop-shadow-md group-hover:scale-105 transition duration-500">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">TensorFlow Developer</h3>
-                        <p class="text-sm text-blue-600 font-medium mb-3">DeepLearning.AI & Coursera</p>
+                    <div class="p-6 relative">
+                        <h3 class="text-lg font-bold text-gray-900 mb-1 pr-6">TensorFlow Developer</h3>
+                        <i class="fas fa-expand-alt absolute top-7 right-6 text-gray-400 group-hover:text-teal-500 transition"></i>
+                        <p class="text-sm text-blue-600 font-medium mb-3">DeepLearning.AI</p>
                         <p class="text-gray-500 text-xs font-medium"><i class="far fa-calendar-alt"></i> Issued: Nov 2024</p>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden group hover:shadow-2xl transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                <!-- Card 7: Coursera ML -->
+                <div class="bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden group hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 cursor-pointer" data-aos="fade-up" data-aos-delay="300" onclick="openModal('Machine Learning Specialization', 'Stanford Univ & DeepLearning.AI', 'Issued: Oct 2024', 'images/sertif-mlCoursera.jpg', 'An intensive specialization program taught directly by experts from Stanford University. Built a strong theoretical and practical foundation in supervised and unsupervised learning, recommender systems, and the application of fundamental mathematics behind artificial intelligence algorithms.')">
                     <div class="h-56 bg-gray-100 relative overflow-hidden flex items-center justify-center p-4">
                         <img src="images/sertif-mlCoursera.jpg" alt="Machine Learning Stanford" class="w-full h-full object-contain drop-shadow-md group-hover:scale-105 transition duration-500">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Machine Learning Specialization</h3>
-                        <p class="text-sm text-red-600 font-medium mb-3">Stanford Univ & DeepLearning.AI</p>
+                    <div class="p-6 relative">
+                        <h3 class="text-lg font-bold text-gray-900 mb-1 pr-6">Machine Learning Specialization</h3>
+                        <i class="fas fa-expand-alt absolute top-7 right-6 text-gray-400 group-hover:text-teal-500 transition"></i>
+                        <p class="text-sm text-red-600 font-medium mb-3">Stanford Univ</p>
                         <p class="text-gray-500 text-xs font-medium"><i class="far fa-calendar-alt"></i> Issued: Oct 2024</p>
                     </div>
                 </div>
 
             </div>
         </div>
+
+        <!-- STRUKTUR MODAL -->
+        <div id="certModal" class="fixed inset-0 z-[100] flex items-center justify-center hidden opacity-0 transition-opacity duration-300">
+            <!-- Latar belakang gelap -->
+            <div class="absolute inset-0 bg-gray-900 bg-opacity-70 backdrop-blur-sm cursor-pointer" onclick="closeModal()"></div>
+            
+            <!-- Kotak Konten Modal -->
+            <div class="relative bg-white w-11/12 max-w-3xl max-h-[90vh] rounded-3xl shadow-2xl flex flex-col md:flex-row overflow-hidden transform scale-95 transition-transform duration-300 z-10" id="certModalContent">
+                
+                <!-- Tombol Tutup (X) -->
+                <button onclick="closeModal()" class="absolute top-4 right-4 z-20 bg-white/50 hover:bg-gray-100 text-gray-800 w-8 h-8 rounded-full flex items-center justify-center transition">
+                    <i class="fas fa-times text-lg"></i>
+                </button>
+
+                <!-- Bagian Gambar Sertifikat -->
+                <div class="w-full md:w-1/2 bg-gray-100 p-6 flex items-center justify-center min-h-[250px] border-b md:border-b-0 md:border-r border-gray-200">
+                    <img id="modalImg" src="" alt="Certificate Preview" class="w-full h-auto max-h-[60vh] object-contain drop-shadow-md rounded">
+                </div>
+                
+                <!-- Bagian Teks Penjelasan -->
+                <div class="w-full md:w-1/2 p-8 md:p-10 flex flex-col justify-center overflow-y-auto">
+                    <h3 id="modalTitle" class="text-2xl font-bold text-gray-900 mb-2 leading-snug"></h3>
+                    <p id="modalIssuer" class="text-teal-600 font-semibold text-sm mb-1 uppercase tracking-wider"></p>
+                    <p id="modalDate" class="text-gray-500 text-xs font-medium mb-6 flex items-center gap-1"></p>
+                    
+                    <div class="h-px w-12 bg-gray-300 mb-6"></div>
+                    
+                    <h4 class="text-sm font-bold text-gray-800 mb-2 uppercase tracking-widest"><i class="fas fa-info-circle text-gray-400 mr-2"></i> What I Learned</h4>
+                    <p id="modalDesc" class="text-gray-600 text-sm leading-relaxed text-justify"></p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- EXPERIENCE SECTION -->
+ <!-- EXPERIENCE SECTION -->
     <section id="experience" class="py-24 max-w-5xl mx-auto px-6 text-center">
         <h2 class="text-3xl font-bold mb-12" data-aos="fade-down">Work <span class="text-purple-600">Experience.</span></h2>
         
         <div class="space-y-8">
+            <!-- KOTAK 1: BPS -->
             <div class="bg-white border border-gray-100 rounded-3xl p-8 shadow-xl text-left hover:shadow-2xl transition duration-300 transform hover:-translate-y-1" data-aos="fade-up">
                 <div class="flex justify-between items-start flex-wrap gap-4 mb-6 border-b border-gray-100 pb-6">
                     <div class="flex items-center gap-4">
-                        <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center text-blue-500 text-2xl">
-                            <i class="fas fa-clipboard-list"></i>
+                        <div class="w-14 h-14 bg-white border border-gray-100 shadow-sm rounded-xl flex items-center justify-center p-1.5 overflow-hidden">
+                            <img src="images/logo_bps.png" alt="BPS Logo" class="w-full h-full object-contain">
                         </div>
                         <div>
                             <h3 class="text-xl font-bold text-gray-900">Economic Census Enumerator</h3>
@@ -333,11 +391,12 @@
                 </div>
             </div>
 
+            <!-- KOTAK 2: PLN -->
             <div class="bg-white border border-gray-100 rounded-3xl p-8 shadow-xl text-left hover:shadow-2xl transition duration-300 transform hover:-translate-y-1" data-aos="fade-up" data-aos-delay="150">
                 <div class="flex justify-between items-start flex-wrap gap-4 mb-6 border-b border-gray-100 pb-6">
                     <div class="flex items-center gap-4">
-                        <div class="w-14 h-14 bg-yellow-50 rounded-xl flex items-center justify-center text-yellow-500 text-2xl">
-                            <i class="fas fa-folder-open"></i>
+                        <div class="w-14 h-14 bg-white border border-gray-100 shadow-sm rounded-xl flex items-center justify-center p-1.5 overflow-hidden">
+                            <img src="images/Logo_PLN.png" alt="PLN Logo" class="w-full h-full object-contain">
                         </div>
                         <div>
                             <h3 class="text-xl font-bold text-gray-900">Finance & General Affairs Intern</h3>
@@ -370,11 +429,13 @@
                 </div>
             </div>
             
+            <!-- KOTAK 3: BANGKIT ACADEMY -->
             <div class="bg-white border border-gray-100 rounded-3xl p-8 shadow-xl text-left hover:shadow-2xl transition duration-300 transform hover:-translate-y-1" data-aos="fade-up" data-aos-delay="300">
                 <div class="flex justify-between items-start flex-wrap gap-4 mb-6 border-b border-gray-100 pb-6">
                     <div class="flex items-center gap-4">
-                        <div class="w-14 h-14 bg-red-50 rounded-xl flex items-center justify-center text-red-500 text-2xl">
-                            <i class="fab fa-google"></i>
+                        <!-- Ganti ikon dengan Logo Bangkit/MSIB -->
+                        <div class="w-14 h-14 bg-white border border-gray-100 shadow-sm rounded-xl flex items-center justify-center p-1.5 overflow-hidden">
+                            <img src="images/logo_bangkit.jpg" alt="Bangkit Logo" class="w-full h-full object-contain">
                         </div>
                         <div>
                             <h3 class="text-xl font-bold text-gray-900">Machine Learning Cohort</h3>
@@ -390,7 +451,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-600 mb-8">
                     <ul class="list-disc list-inside space-y-2">
                         <li>Graduated from Bangkit Academy, an intensive tech and career readiness program officially endorsed by the Ministry of Education (MSIB).</li>
-                        <li>Collaborated in a cross-functional team to build and launch <strong>Anemalyzed</strong> as the final Capstone Project.</li>
+                        <li>Collaborated in a cross-functional team to build and launch <strong>Anemalyze</strong> as the final Capstone Project.</li>
                     </ul>
                     <ul class="list-disc list-inside space-y-2">
                         <li>Bridged the gap between Machine Learning and software development by preparing datasets, training models, and planning backend deployment.</li>
@@ -571,7 +632,7 @@
 
     <!-- FOOTER -->
     <footer class="bg-white py-8 border-t border-gray-100 text-center text-sm text-gray-500">
-        <p>&copy; 2026 Ilma Navila. Web Developer</p>
+        <p>&copy; 2026 Ilma Navila. Full-Stack Developer</p>
     </footer>
 
     <!-- Memanggil AOS Animation JS & ScrollSpy -->
@@ -605,6 +666,52 @@
                     link.classList.remove('text-gray-800');
                 }
             });
+        });
+
+        const modal = document.getElementById('certModal');
+        const modalContent = document.getElementById('certModalContent');
+        const mTitle = document.getElementById('modalTitle');
+        const mIssuer = document.getElementById('modalIssuer');
+        const mDate = document.getElementById('modalDate');
+        const mImg = document.getElementById('modalImg');
+        const mDesc = document.getElementById('modalDesc');
+
+        function openModal(title, issuer, date, imgSrc, desc) {
+            // Isi data ke dalam modal
+            mTitle.textContent = title;
+            mIssuer.textContent = issuer;
+            mDate.innerHTML = '<i class="far fa-calendar-alt"></i> ' + date;
+            mImg.src = imgSrc;
+            mDesc.textContent = desc;
+
+            // Tampilkan modal
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modalContent.classList.remove('scale-95');
+            }, 10);
+            
+            // Nonaktifkan scroll pada halaman utama saat modal terbuka
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            // Jalankan animasi keluar (fade-out)
+            modal.classList.add('opacity-0');
+            modalContent.classList.add('scale-95');
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                // Kembalikan scroll pada halaman utama
+                document.body.style.overflow = 'auto';
+            }, 300);
+        }
+
+        // Fitur tambahan: Menutup modal dengan menekan tombol 'Escape' pada keyboard
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape" && !modal.classList.contains('hidden')) {
+                closeModal();
+            }
         });
 
         const contactForm = document.getElementById('contactForm');
